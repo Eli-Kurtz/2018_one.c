@@ -9,13 +9,25 @@
 int main () {
 
         FILE* ptr;
-        int n;
+        int n[1000], i, the_count;
 
         ptr = fopen("2018_one.txt", "r");
-        fscanf( ptr, "%d", &n) ;
+
+        for (i=0; i < 100; i ++) {
+                fscanf( ptr, "%d", &n[i]) ;
+                //printf("\n%d\n", n[i]);
+                }
+
         fclose( ptr );
 
-        printf("%d", n);
+        for (i=0; i<100; i++) {
+                printf("\nthe next number is %d\n", n[i]);
+                the_count += n[i];
+                printf("\nthe running total is %d\n", the_count);
+
+        }
+
+        printf("%d", the_count);
 
 return 0;
 }
