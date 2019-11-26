@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+#include<stdbool.h>
+#include<stddef.h>
+#include<ctype.h>
+
+int main () {
+
+        FILE* ptr;
+        int n;
+
+        ptr = fopen("2018_one.txt", "r");
+        fscanf( ptr, "%d", &n) ;
+        fclose( ptr );
+
+        printf("%d", n);
+
+return 0;
+}
+
+ void run () {
+
+        main();
+}
